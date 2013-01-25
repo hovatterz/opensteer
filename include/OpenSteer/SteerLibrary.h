@@ -53,6 +53,7 @@
 #include "OpenSteer/Utilities.h"
 
 // Include OpenSteer::Color, OpenSteer::gBlack, ...
+#include "Annotation.h"
 #include "Color.h"
 
 namespace OpenSteer {
@@ -1024,7 +1025,7 @@ steerForPursuit (const AbstractVehicle& quarry,
     const Vec3 target = quarry.predictFuturePosition (etl);
 
     // annotation
-    annotationLine (position(),
+    this->annotationLine (position(),
                     target,
                     gaudyPursuitAnnotation ? color : gGray40);
 
@@ -1042,7 +1043,7 @@ steerForEvasion (const AbstractVehicle& menace,
                  const float maxPredictionTime)
 {
     // offset from this to menace, that distance, unit vector toward menace
-    const Vec3 offset = menace.position - position;
+    const Vec3 offset = menace.position() - position;
     const float distance = offset.length ();
 
     const float roughTime = distance / menace.speed();

@@ -14,13 +14,9 @@ if(APPLE)
 endif(APPLE)
 
 FILE(GLOB OPENSTEER_SRCS "src/*.cpp" "src/*.c")
-FILE(GLOB OPENSTEER_PLUGIN_SRCS "plugins/*.cpp")
 
 include_directories("${CMAKE_SOURCE_DIR}/include")
 add_library(opensteer ${OPENSTEER_SRCS})
-
-add_executable(example ${OPENSTEER_PLUGIN_SRCS} "example/main.cpp")
-target_link_libraries(example opensteer ${OPENGL_LIBRARIES})
 
 install(
     TARGETS opensteer
@@ -29,3 +25,5 @@ install(
     ARCHIVE DESTINATION lib COMPONENT dev
     )
 install(DIRECTORY include DESTINATION .)
+
+add_subdirectory(example)

@@ -36,8 +36,8 @@
 // ------------------------------------------------------------------------
 
 
-#include "OpenSteer/OpenSteerDemo.h"        // OpenSteerDemo application
-#include "OpenSteer/Draw.h"                 // OpenSteerDemo graphics
+#include "OpenSteerDemo.h"        // OpenSteerDemo application
+#include "Draw.h"                 // OpenSteerDemo graphics
 
 // To include EXIT_SUCCESS
 #include <cstdlib>

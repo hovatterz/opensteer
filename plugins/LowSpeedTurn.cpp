@@ -42,7 +42,7 @@
 #include <iomanip>
 #include <sstream>
 #include "OpenSteer/SimpleVehicle.h"
-#include "OpenSteer/OpenSteerDemo.h"
+#include "OpenSteerDemo.h"
 #include "OpenSteer/Color.h"
 
 namespace {

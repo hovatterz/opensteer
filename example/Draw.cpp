@@ -47,7 +47,7 @@
 //
 // ----------------------------------------------------------------------------
 
-#include "OpenSteer/Draw.h"
+#include "Draw.h"
 
 #include <iomanip>
 #include <sstream>

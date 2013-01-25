@@ -1,4 +1,5 @@
 set(EXECUTABLE_OUTPUT_PATH "${CMAKE_SOURCE_DIR}/bin")
+set(LIBRARY_OUTPUT_PATH "${CMAKE_SOURCE_DIR}/lib")
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
 
 cmake_minimum_required(VERSION 2.8)
@@ -16,5 +17,7 @@ FILE(GLOB OPENSTEER_SRCS "src/*.cpp" "src/*.c")
 FILE(GLOB OPENSTEER_PLUGIN_SRCS "plugins/*.cpp")
 
 include_directories("${CMAKE_SOURCE_DIR}/include")
-add_executable(example ${OPENSTEER_SRCS} ${OPENSTEER_PLUGIN_SRCS})
-target_link_libraries(example ${OPENGL_LIBRARIES})
+add_library(opensteer ${OPENSTEER_SRCS})
+
+add_executable(example ${OPENSTEER_PLUGIN_SRCS} "example/main.cpp")
+target_link_libraries(example opensteer ${OPENGL_LIBRARIES})

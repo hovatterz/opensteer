@@ -1,2 +1,3 @@
 build/
-bin/example
+bin/
+lib/

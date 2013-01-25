@@ -21,3 +21,11 @@ add_library(opensteer ${OPENSTEER_SRCS})
 
 add_executable(example ${OPENSTEER_PLUGIN_SRCS} "example/main.cpp")
 target_link_libraries(example opensteer ${OPENGL_LIBRARIES})
+
+install(
+    TARGETS opensteer
+    RUNTIME DESTINATION bin COMPONENT bin
+    LIBRARY DESTINATION lib COMPONENT bin
+    ARCHIVE DESTINATION lib COMPONENT dev
+    )
+install(DIRECTORY include DESTINATION .)

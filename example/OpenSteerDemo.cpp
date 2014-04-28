@@ -59,7 +59,10 @@
 #if __APPLE__ && __MACH__
 #include <GLUT/glut.h>   // for Mac OS X
 #else
-#include <GL/glut.h>     // for Linux and Windows
+    #include <GL/glu.h>     // for Linux and Windows
+    #ifndef HAVE_NO_GLUT
+        #include <GL/glut.h>   // for Mac OS X
+    #endif
 #endif
 
 // ----------------------------------------------------------------------------
@@ -1513,5 +1516,4 @@ OpenSteer::drawGetWindowWidth  (void)
 {
     return glutGet (GLUT_WINDOW_WIDTH);
 }
-
 

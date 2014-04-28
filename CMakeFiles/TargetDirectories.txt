@@ -1,2 +1,0 @@
-/home/adriano/Projects/jme3/opensteer/example/CMakeFiles/example.dir
-/home/adriano/Projects/jme3/opensteer/CMakeFiles/opensteer.dir

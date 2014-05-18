@@ -1,0 +1,10 @@
+Tab	select next PlugIn
+r	restart current PlugIn
+s	select next vehicle/agent/character  (or mouse-click to select)
+c	select next camera aiming mode
+f	select next preset frame rate  (as-fast-as-possible, 24fps, 60fps)
+a	toggle annotation on/off
+Space	toggle between Run and Pause
+->   (right arrow)	step forward one frame
+?	print "mini help" on console  (or see the quick reference guide)
+Esc	exit OpenSteerDemo
